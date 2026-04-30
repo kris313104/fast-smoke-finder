@@ -1,0 +1,67 @@
+[
+  {
+    "id": "anubis_a_bridge_smoke_001",
+    "map": "anubis",
+    "type": "smoke",
+    "title": "A Bridge Smoke",
+    "description": "Stand at T side canal. Aim at the top of the bridge arch.",
+    "tags": ["a", "bridge", "ct", "entry", "t-side"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "anubis_b_site_smoke_001",
+    "map": "anubis",
+    "type": "smoke",
+    "title": "B CT Smoke",
+    "description": "From B main, aim above the CT arch.",
+    "tags": ["b", "ct", "entry", "t-side", "default"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "anubis_mid_water_smoke_001",
+    "map": "anubis",
+    "type": "smoke",
+    "title": "Mid Water Smoke",
+    "description": "Smoke off mid to take water control.",
+    "tags": ["mid", "water", "t-side", "default"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "anubis_a_site_molotov_001",
+    "map": "anubis",
+    "type": "molotov",
+    "title": "A Site Default Molotov",
+    "description": "From CT side, throw to deny plant at default.",
+    "tags": ["a", "ct-side", "retake", "default", "post-plant"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "anubis_b_palace_smoke_001",
+    "map": "anubis",
+    "type": "smoke",
+    "title": "B Palace Smoke",
+    "description": "Stand at B ramp, smoke palace entrance to split site.",
+    "tags": ["b", "palace", "entry", "t-side"],
+    "stance": "crouching",
+    "throw_type": "right-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  }
+]

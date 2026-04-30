@@ -1,0 +1,67 @@
+[
+  {
+    "id": "ancient_a_temple_smoke_001",
+    "map": "ancient",
+    "type": "smoke",
+    "title": "A Temple Smoke",
+    "description": "From T-side main, aim at the corner of the temple doorway.",
+    "tags": ["a", "temple", "ct", "entry", "t-side"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "ancient_b_middle_smoke_001",
+    "map": "ancient",
+    "type": "smoke",
+    "title": "B Middle Smoke",
+    "description": "Stand at mid entrance, aim above the B door frame.",
+    "tags": ["b", "mid", "entry", "t-side"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "ancient_a_ct_smoke_001",
+    "map": "ancient",
+    "type": "smoke",
+    "title": "A CT Smoke",
+    "description": "From T-ramp, aim at the concrete pillar edge.",
+    "tags": ["a", "ct", "entry", "t-side", "default"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "ancient_b_site_molotov_001",
+    "map": "ancient",
+    "type": "molotov",
+    "title": "B Default Plant Molotov",
+    "description": "Throw to the default plant spot to deny retake.",
+    "tags": ["b", "t-side", "post-plant", "default"],
+    "stance": "standing",
+    "throw_type": "right-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "ancient_mid_smoke_001",
+    "map": "ancient",
+    "type": "smoke",
+    "title": "Mid Control Smoke",
+    "description": "From T side, block the mid CT view.",
+    "tags": ["mid", "ct", "t-side", "default"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  }
+]

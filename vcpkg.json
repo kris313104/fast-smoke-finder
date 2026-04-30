@@ -1,0 +1,10 @@
+{
+  "name": "fast-smoke-finder",
+  "version": "0.1.0",
+  "dependencies": [
+    {
+      "name": "drogon",
+      "features": ["sqlite3"]
+    }
+  ]
+}

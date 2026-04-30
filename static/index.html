@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS2 QuickLineups</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+
+  <!-- Screen 1: Map selection -->
+  <div id="screen-map" class="screen active">
+    <div class="header-brand">
+      <span class="brand-cs">CS2</span>
+      <span class="brand-name">QuickLineups</span>
+    </div>
+    <p class="subtitle">Select a map to start searching</p>
+    <div id="map-grid"></div>
+  </div>
+
+  <!-- Screen 2: Search + results -->
+  <div id="screen-search" class="screen">
+    <div id="search-header">
+      <button id="btn-back" title="Back to maps (Escape)">&#8592; Maps</button>
+      <span id="map-label"></span>
+      <div id="type-filter">
+        <button class="filter active" data-type="">All</button>
+        <button class="filter" data-type="smoke">Smoke</button>
+        <button class="filter" data-type="molotov">Molotov</button>
+        <button class="filter" data-type="flash">Flash</button>
+      </div>
+    </div>
+    <div id="search-wrap">
+      <input id="search-input" type="text"
+             placeholder="e.g.  ct a doors  ·  b ramp post-plant  ·  mid window smoke"
+             autocomplete="off" autocorrect="off" spellcheck="false">
+      <span id="result-count"></span>
+    </div>
+    <div id="results-container"></div>
+  </div>
+
+  <!-- Lineup detail modal -->
+  <div id="modal" class="hidden" role="dialog" aria-modal="true">
+    <div id="modal-backdrop"></div>
+    <div id="modal-content">
+      <button id="modal-close" title="Close (Escape)">&#x2715;</button>
+      <h2 id="modal-title"></h2>
+      <div id="modal-images">
+        <figure>
+          <img id="modal-pos" alt="Position">
+          <figcaption>Where to stand</figcaption>
+        </figure>
+        <figure>
+          <img id="modal-cross" alt="Crosshair placement">
+          <figcaption>Crosshair placement</figcaption>
+        </figure>
+      </div>
+      <div id="modal-meta"></div>
+      <a id="modal-video" href="#" target="_blank" rel="noopener noreferrer" class="hidden">
+        &#9654; Watch video guide
+      </a>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

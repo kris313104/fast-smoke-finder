@@ -1,0 +1,199 @@
+#include "LineupStore.h"
+#include <drogon/drogon.h>
+#include <filesystem>
+#include <fstream>
+#include <algorithm>
+#include <cctype>
+#include <sstream>
+
+namespace fs = std::filesystem;
+
+LineupStore& LineupStore::instance() {
+    static LineupStore inst;
+    return inst;
+}
+
+// ---- normalise -------------------------------------------------------
+
+std::string LineupStore::normalise(const std::string& s) {
+    std::string out;
+    out.reserve(s.size());
+    for (unsigned char c : s)
+        out += static_cast<char>(std::tolower(c));
+    return out;
+}
+
+// Split a string on any character in 'delims'.
+static std::vector<std::string> splitOn(const std::string& s, const std::string& delims) {
+    std::vector<std::string> parts;
+    std::string cur;
+    for (char c : s) {
+        if (delims.find(c) != std::string::npos) {
+            if (!cur.empty()) { parts.push_back(cur); cur.clear(); }
+        } else {
+            cur += c;
+        }
+    }
+    if (!cur.empty()) parts.push_back(cur);
+    return parts;
+}
+
+// ---- load ------------------------------------------------------------
+
+void LineupStore::loadFromDirectory(const std::string& dataDir) {
+    fs::path dir(dataDir);
+    if (!fs::exists(dir) || !fs::is_directory(dir)) {
+        LOG_WARN << "LineupStore: data directory not found: " << dataDir;
+        return;
+    }
+
+    for (auto& entry : fs::directory_iterator(dir)) {
+        if (entry.path().extension() != ".json") continue;
+
+        std::ifstream f(entry.path());
+        if (!f.is_open()) {
+            LOG_WARN << "LineupStore: cannot open " << entry.path();
+            continue;
+        }
+
+        Json::Value root;
+        Json::CharReaderBuilder rb;
+        std::string errs;
+        if (!Json::parseFromStream(rb, f, &root, &errs)) {
+            LOG_WARN << "LineupStore: JSON parse error in " << entry.path() << ": " << errs;
+            continue;
+        }
+
+        if (!root.isArray()) {
+            LOG_WARN << "LineupStore: expected JSON array in " << entry.path();
+            continue;
+        }
+
+        std::string mapId = entry.path().stem().string(); // filename without extension
+        auto& vec = data_[mapId];
+        vec.reserve(root.size());
+        for (const auto& jl : root)
+            vec.push_back(lineupFromJson(jl));
+
+        LOG_INFO << "LineupStore: loaded " << vec.size() << " lineups for map '" << mapId << "'";
+    }
+
+    buildIndex();
+    LOG_INFO << "LineupStore: index built for " << data_.size() << " map(s)";
+}
+
+// ---- index -----------------------------------------------------------
+
+void LineupStore::buildIndex() {
+    for (auto& [mapId, lineups] : data_) {
+        auto& idx = tagIndex_[mapId];
+        for (size_t i = 0; i < lineups.size(); ++i) {
+            for (const auto& tag : lineups[i].tags) {
+                std::string norm = normalise(tag);
+                idx[norm].push_back(i);
+                // Also index each hyphen-separated part individually.
+                for (const auto& part : splitOn(norm, "-"))
+                    if (part != norm) idx[part].push_back(i);
+            }
+        }
+    }
+}
+
+// ---- search ----------------------------------------------------------
+
+std::vector<const Lineup*> LineupStore::search(
+    const std::string& map,
+    const std::vector<std::string>& tokens,
+    const std::string& typeFilter) const
+{
+    auto dit = data_.find(map);
+    if (dit == data_.end()) return {};
+    const auto& lineups = dit->second;
+
+    auto iit = tagIndex_.find(map);
+    if (iit == tagIndex_.end()) return {};
+    const auto& idx = iit->second;
+
+    // Accumulate hit counts.
+    std::unordered_map<size_t, int> scores;
+    for (const auto& tok : tokens) {
+        auto it = idx.find(tok);
+        if (it == idx.end()) continue;
+        for (size_t i : it->second)
+            scores[i]++;
+    }
+
+    // Collect, filter, sort.
+    std::vector<std::pair<int, size_t>> ranked; // (score, index)
+    ranked.reserve(scores.size());
+    for (auto& [i, score] : scores) {
+        if (!typeFilter.empty() && lineups[i].type != typeFilter) continue;
+        ranked.push_back({score, i});
+    }
+
+    std::sort(ranked.begin(), ranked.end(),
+              [](const auto& a, const auto& b) { return a.first > b.first; });
+
+    constexpr size_t kMaxResults = 50;
+    std::vector<const Lineup*> results;
+    results.reserve(std::min(ranked.size(), kMaxResults));
+    for (size_t k = 0; k < ranked.size() && k < kMaxResults; ++k)
+        results.push_back(&lineups[ranked[k].second]);
+    return results;
+}
+
+// ---- serialisation ---------------------------------------------------
+
+Json::Value LineupStore::mapToJson(const std::string& map) const {
+    auto it = data_.find(map);
+    if (it == data_.end()) return Json::Value(Json::nullValue);
+
+    Json::Value arr(Json::arrayValue);
+    for (const auto& l : it->second)
+        arr.append(lineupToJson(l));
+    return arr;
+}
+
+std::vector<std::string> LineupStore::mapIds() const {
+    std::vector<std::string> ids;
+    ids.reserve(data_.size());
+    for (auto& [id, _] : data_) ids.push_back(id);
+    std::sort(ids.begin(), ids.end());
+    return ids;
+}
+
+Json::Value LineupStore::lineupToJson(const Lineup& l) {
+    Json::Value j;
+    j["id"]            = l.id;
+    j["map"]           = l.map;
+    j["type"]          = l.type;
+    j["title"]         = l.title;
+    j["description"]   = l.description;
+    j["stance"]        = l.stance;
+    j["throw_type"]    = l.throw_type;
+    j["position_img"]  = l.position_img;
+    j["crosshair_img"] = l.crosshair_img;
+    j["video_url"]     = l.video_url;
+    Json::Value tags(Json::arrayValue);
+    for (auto& t : l.tags) tags.append(t);
+    j["tags"] = tags;
+    return j;
+}
+
+Lineup LineupStore::lineupFromJson(const Json::Value& j) {
+    Lineup l;
+    l.id            = j.get("id",            "").asString();
+    l.map           = j.get("map",           "").asString();
+    l.type          = j.get("type",          "smoke").asString();
+    l.title         = j.get("title",         "").asString();
+    l.description   = j.get("description",   "").asString();
+    l.stance        = j.get("stance",        "standing").asString();
+    l.throw_type    = j.get("throw_type",    "left-click").asString();
+    l.position_img  = j.get("position_img",  "").asString();
+    l.crosshair_img = j.get("crosshair_img", "").asString();
+    l.video_url     = j.get("video_url",     "").asString();
+    const Json::Value& tags = j["tags"];
+    if (tags.isArray())
+        for (const auto& t : tags) l.tags.push_back(t.asString());
+    return l;
+}

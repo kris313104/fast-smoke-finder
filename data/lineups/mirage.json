@@ -1,0 +1,80 @@
+[
+  {
+    "id": "mirage_a_jungle_smoke_001",
+    "map": "mirage",
+    "type": "smoke",
+    "title": "A Jungle Smoke",
+    "description": "Stand at T-spawn, aim at the corner of the balcony wall and throw.",
+    "tags": ["a", "jungle", "entry", "t-side", "default"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "mirage_a_stairs_smoke_001",
+    "map": "mirage",
+    "type": "smoke",
+    "title": "A Stairs Smoke",
+    "description": "From A ramp, aim at the top right of the CT stairs entrance.",
+    "tags": ["a", "stairs", "ct", "entry", "t-side"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "mirage_b_van_smoke_001",
+    "map": "mirage",
+    "type": "smoke",
+    "title": "B Van Smoke",
+    "description": "Stand at short corner facing B. Jump-throw aimed at the top edge of van.",
+    "tags": ["b", "van", "entry", "t-side", "default"],
+    "stance": "standing",
+    "throw_type": "jump-throw",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "mirage_mid_window_smoke_001",
+    "map": "mirage",
+    "type": "smoke",
+    "title": "Mid Window Smoke",
+    "description": "From T-spawn mid, aim at the top-left corner of the window room.",
+    "tags": ["mid", "window", "t-side", "default"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "mirage_a_ticket_smoke_001",
+    "map": "mirage",
+    "type": "smoke",
+    "title": "A Ticket Booth Smoke",
+    "description": "Stand at the entrance of palace. Aim at the gap above the ticket box.",
+    "tags": ["a", "ticket", "palace", "ct-side", "retake"],
+    "stance": "crouching",
+    "throw_type": "right-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "mirage_b_short_molotov_001",
+    "map": "mirage",
+    "type": "molotov",
+    "title": "B Short Molotov",
+    "description": "Throw to the corner of B short to deny fast rush.",
+    "tags": ["b", "short", "ct-side", "default", "anti-rush"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  }
+]

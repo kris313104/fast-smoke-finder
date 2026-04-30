@@ -1,0 +1,67 @@
+[
+  {
+    "id": "vertigo_a_ct_smoke_001",
+    "map": "vertigo",
+    "type": "smoke",
+    "title": "A CT Smoke",
+    "description": "From T ramp, aim at the top of the CT spawn pillar.",
+    "tags": ["a", "ct", "entry", "t-side", "ramp"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "vertigo_b_elevator_smoke_001",
+    "map": "vertigo",
+    "type": "smoke",
+    "title": "B Elevator Smoke",
+    "description": "Stand at T mid, smoke elevator entrance.",
+    "tags": ["b", "elevator", "mid", "entry", "t-side"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "vertigo_a_scaffold_molotov_001",
+    "map": "vertigo",
+    "type": "molotov",
+    "title": "A Scaffold Molotov",
+    "description": "From CT, throw to scaffold to deny T entry.",
+    "tags": ["a", "scaffold", "ct-side", "default", "anti-rush"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "vertigo_b_ct_smoke_001",
+    "map": "vertigo",
+    "type": "smoke",
+    "title": "B CT Corner Smoke",
+    "description": "Throw from mid to cut CT off from B.",
+    "tags": ["b", "ct", "mid", "entry", "t-side"],
+    "stance": "standing",
+    "throw_type": "jump-throw",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "vertigo_mid_flash_001",
+    "map": "vertigo",
+    "type": "flash",
+    "title": "Mid Pop Flash",
+    "description": "Throw from T ramp to flash defenders in mid.",
+    "tags": ["mid", "t-side", "entry", "pop-flash"],
+    "stance": "standing",
+    "throw_type": "jump-throw",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  }
+]
