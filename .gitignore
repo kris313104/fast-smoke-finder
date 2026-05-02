@@ -1,0 +1,18 @@
+# Build output
+build/
+
+# Uploaded lineup photos (user-generated, not source)
+static/img/lineups/*.jpg
+static/img/lineups/*.jpeg
+static/img/lineups/*.png
+static/img/lineups/*.webp
+!static/img/lineups/placeholder_pos.jpg
+!static/img/lineups/placeholder_cross.jpg
+
+# Logs
+logs/
+
+# VS / CMake artifacts
+.vs/
+CMakeSettings.json
+out/
