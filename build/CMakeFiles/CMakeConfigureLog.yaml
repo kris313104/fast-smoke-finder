@@ -1,0 +1,499 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 6.2.9200 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Wersja programu MSBuild 17.14.14+a129329f1 dla .NET Framework
+      Kompilacja rozpocz─Ö┼éa si─Ö 01.05.2026 13:50:11.
+      
+      Projekt ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\CompilerIdCXX.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+      PrepareForBuild:
+        Tworzenie katalogu ÔÇ×Debug\\ÔÇŁ.
+        Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
+        Tworzenie katalogu ÔÇ×Debug\\CompilerIdCXX.tlog\\ÔÇŁ.
+      InitializeBuildStatus:
+        Trwa tworzenie ÔÇ×Debug\\CompilerIdCXX.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+        Modyfikowanie ÔÇ×Debug\\CompilerIdCXX.tlog\\unsuccessfulbuildÔÇŁ.
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Usuwanie pliku ÔÇ×Debug\\CompilerIdCXX.tlog\\unsuccessfulbuildÔÇŁ.
+        Modyfikowanie ÔÇ×Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstateÔÇŁ.
+      Kompilowanie projektu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\CompilerIdCXX.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
+      
+      Kompilacja powiod┼éa si─Ö.
+          Ostrze┼╝enia: 0
+          Liczba b┼é─Öd├│w: 0
+      
+      Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.89
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/3.29.2/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-9ehk31"
+      binary: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-9ehk31"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-9ehk31'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b5a69.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Wersja programu MSBuild 17.14.14+a129329f1 dla .NET Framework
+        Kompilacja rozpocz─Ö┼éa si─Ö 01.05.2026 13:50:13.
+        
+        Projekt ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ehk31\\cmTC_b5a69.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        PrepareForBuild:
+          Tworzenie katalogu ÔÇ×cmTC_b5a69.dir\\Debug\\ÔÇŁ.
+          Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
+          Tworzenie katalogu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ehk31\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_b5a69.dir\\Debug\\cmTC_b5a69.tlog\\ÔÇŁ.
+        InitializeBuildStatus:
+          Trwa tworzenie ÔÇ×cmTC_b5a69.dir\\Debug\\cmTC_b5a69.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_b5a69.dir\\Debug\\cmTC_b5a69.tlog\\unsuccessfulbuildÔÇŁ.
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b5a69.dir\\Debug\\\\" /Fd"cmTC_b5a69.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Strawberry\\c\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ wersja kompilatora optymalizuj─ůcego 19.38.33145 dla x64
+          Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b5a69.dir\\Debug\\\\" /Fd"cmTC_b5a69.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Strawberry\\c\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ehk31\\Debug\\cmTC_b5a69.exe" /INCREMENTAL /ILK:"cmTC_b5a69.dir\\Debug\\cmTC_b5a69.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-9ehk31/Debug/cmTC_b5a69.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-9ehk31/Debug/cmTC_b5a69.lib" /MACHINE:X64  /machine:x64 cmTC_b5a69.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_b5a69.vcxproj -> C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ehk31\\Debug\\cmTC_b5a69.exe
+        FinalizeBuildStatus:
+          Usuwanie pliku ÔÇ×cmTC_b5a69.dir\\Debug\\cmTC_b5a69.tlog\\unsuccessfulbuildÔÇŁ.
+          Modyfikowanie ÔÇ×cmTC_b5a69.dir\\Debug\\cmTC_b5a69.tlog\\cmTC_b5a69.lastbuildstateÔÇŁ.
+        Kompilowanie projektu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9ehk31\\cmTC_b5a69.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
+        
+        Kompilacja powiod┼éa si─Ö.
+            Ostrze┼╝enia: 0
+            Liczba b┼é─Öd├│w: 0
+        
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.55
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.38.33145.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/vcpkg_installed/x64-windows/share/trantor/TrantorConfig.cmake:48 (find_dependency)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/vcpkg_installed/x64-windows/share/drogon/DrogonConfig.cmake:40 (find_dependency)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-ar4m5q"
+      binary: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-ar4m5q"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed/x64-windows/share/drogon;C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed/x64-windows/share/trantor"
+      VCPKG_INSTALLED_DIR: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-ar4m5q'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e5896.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Wersja programu MSBuild 17.14.14+a129329f1 dla .NET Framework
+        Kompilacja rozpocz─Ö┼éa si─Ö 01.05.2026 13:50:13.
+        
+        Projekt ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ar4m5q\\cmTC_e5896.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        PrepareForBuild:
+          Tworzenie katalogu ÔÇ×cmTC_e5896.dir\\Debug\\ÔÇŁ.
+          Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
+          Tworzenie katalogu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ar4m5q\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_e5896.dir\\Debug\\cmTC_e5896.tlog\\ÔÇŁ.
+        InitializeBuildStatus:
+          Trwa tworzenie ÔÇ×cmTC_e5896.dir\\Debug\\cmTC_e5896.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_e5896.dir\\Debug\\cmTC_e5896.tlog\\unsuccessfulbuildÔÇŁ.
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"cmTC_e5896.dir\\Debug\\\\" /Fd"cmTC_e5896.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ar4m5q\\src.cxx"
+          Microsoft (R) C/C++ wersja kompilatora optymalizuj─ůcego 19.38.33145 dla x64
+          Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"cmTC_e5896.dir\\Debug\\\\" /Fd"cmTC_e5896.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ar4m5q\\src.cxx"
+          src.cxx
+        C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ar4m5q\\src.cxx(1,10): error C1083: Nie mo┼╝na otworzy─ç pliku do┼é─ůcz: 'pthread.h': No such file or directory [C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ar4m5q\\cmTC_e5896.vcxproj]
+        Kompilowanie projektu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ar4m5q\\cmTC_e5896.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
+        
+        Kompilacja NIE POWIOD┼üA SI─ś.
+        
+        ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ar4m5q\\cmTC_e5896.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
+        (element docelowy ClCompile) -> 
+          C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ar4m5q\\src.cxx(1,10): error C1083: Nie mo┼╝na otworzy─ç pliku do┼é─ůcz: 'pthread.h': No such file or directory [C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ar4m5q\\cmTC_e5896.vcxproj]
+        
+            Ostrze┼╝enia: 0
+            Liczba b┼é─Öd├│w: 1
+        
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.41
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/vcpkg_installed/x64-windows/share/trantor/TrantorConfig.cmake:48 (find_dependency)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/vcpkg_installed/x64-windows/share/drogon/DrogonConfig.cmake:40 (find_dependency)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-ugkt0h"
+      binary: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-ugkt0h"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed/x64-windows/share/drogon;C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed/x64-windows/share/trantor"
+      VCPKG_INSTALLED_DIR: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-ugkt0h'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a9942.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Wersja programu MSBuild 17.14.14+a129329f1 dla .NET Framework
+        Kompilacja rozpocz─Ö┼éa si─Ö 01.05.2026 13:50:14.
+        
+        Projekt ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ugkt0h\\cmTC_a9942.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        PrepareForBuild:
+          Tworzenie katalogu ÔÇ×cmTC_a9942.dir\\Debug\\ÔÇŁ.
+          Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
+          Tworzenie katalogu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ugkt0h\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_a9942.dir\\Debug\\cmTC_a9942.tlog\\ÔÇŁ.
+        InitializeBuildStatus:
+          Trwa tworzenie ÔÇ×cmTC_a9942.dir\\Debug\\cmTC_a9942.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_a9942.dir\\Debug\\cmTC_a9942.tlog\\unsuccessfulbuildÔÇŁ.
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"cmTC_a9942.dir\\Debug\\\\" /Fd"cmTC_a9942.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ugkt0h\\CheckFunctionExists.cxx"
+          Microsoft (R) C/C++ wersja kompilatora optymalizuj─ůcego 19.38.33145 dla x64
+          Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"cmTC_a9942.dir\\Debug\\\\" /Fd"cmTC_a9942.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ugkt0h\\CheckFunctionExists.cxx"
+          CheckFunctionExists.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ugkt0h\\Debug\\cmTC_a9942.exe" /INCREMENTAL /ILK:"cmTC_a9942.dir\\Debug\\cmTC_a9942.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-ugkt0h/Debug/cmTC_a9942.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-ugkt0h/Debug/cmTC_a9942.lib" /MACHINE:X64  /machine:x64 cmTC_a9942.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: nie mo┼╝na otworzy─ç pliku "pthreads.lib" [C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ugkt0h\\cmTC_a9942.vcxproj]
+        Kompilowanie projektu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ugkt0h\\cmTC_a9942.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
+        
+        Kompilacja NIE POWIOD┼üA SI─ś.
+        
+        ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ugkt0h\\cmTC_a9942.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
+        (element docelowy Link) -> 
+          LINK : fatal error LNK1104: nie mo┼╝na otworzy─ç pliku "pthreads.lib" [C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ugkt0h\\cmTC_a9942.vcxproj]
+        
+            Ostrze┼╝enia: 0
+            Liczba b┼é─Öd├│w: 1
+        
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.43
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/vcpkg_installed/x64-windows/share/trantor/TrantorConfig.cmake:48 (find_dependency)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/vcpkg_installed/x64-windows/share/drogon/DrogonConfig.cmake:40 (find_dependency)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-7mo3yu"
+      binary: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-7mo3yu"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed/x64-windows/share/drogon;C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed/x64-windows/share/trantor"
+      VCPKG_INSTALLED_DIR: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-7mo3yu'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2a33a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Wersja programu MSBuild 17.14.14+a129329f1 dla .NET Framework
+        Kompilacja rozpocz─Ö┼éa si─Ö 01.05.2026 13:50:15.
+        
+        Projekt ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7mo3yu\\cmTC_2a33a.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        PrepareForBuild:
+          Tworzenie katalogu ÔÇ×cmTC_2a33a.dir\\Debug\\ÔÇŁ.
+          Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
+          Tworzenie katalogu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7mo3yu\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_2a33a.dir\\Debug\\cmTC_2a33a.tlog\\ÔÇŁ.
+        InitializeBuildStatus:
+          Trwa tworzenie ÔÇ×cmTC_2a33a.dir\\Debug\\cmTC_2a33a.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_2a33a.dir\\Debug\\cmTC_2a33a.tlog\\unsuccessfulbuildÔÇŁ.
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"cmTC_2a33a.dir\\Debug\\\\" /Fd"cmTC_2a33a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7mo3yu\\CheckFunctionExists.cxx"
+          Microsoft (R) C/C++ wersja kompilatora optymalizuj─ůcego 19.38.33145 dla x64
+          Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"cmTC_2a33a.dir\\Debug\\\\" /Fd"cmTC_2a33a.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7mo3yu\\CheckFunctionExists.cxx"
+          CheckFunctionExists.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7mo3yu\\Debug\\cmTC_2a33a.exe" /INCREMENTAL /ILK:"cmTC_2a33a.dir\\Debug\\cmTC_2a33a.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-7mo3yu/Debug/cmTC_2a33a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-7mo3yu/Debug/cmTC_2a33a.lib" /MACHINE:X64  /machine:x64 cmTC_2a33a.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: nie mo┼╝na otworzy─ç pliku "pthread.lib" [C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7mo3yu\\cmTC_2a33a.vcxproj]
+        Kompilowanie projektu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7mo3yu\\cmTC_2a33a.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
+        
+        Kompilacja NIE POWIOD┼üA SI─ś.
+        
+        ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7mo3yu\\cmTC_2a33a.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
+        (element docelowy Link) -> 
+          LINK : fatal error LNK1104: nie mo┼╝na otworzy─ç pliku "pthread.lib" [C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7mo3yu\\cmTC_2a33a.vcxproj]
+        
+            Ostrze┼╝enia: 0
+            Liczba b┼é─Öd├│w: 1
+        
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.43
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CheckIncludeFileCXX.cmake:89 (try_compile)"
+      - "build/vcpkg_installed/x64-windows/share/drogon/FindFilesystem.cmake:162 (check_include_file_cxx)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/vcpkg_installed/x64-windows/share/drogon/DrogonConfig.cmake:70 (find_dependency)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for C++ include filesystem"
+    directories:
+      source: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-j4ie0e"
+      binary: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-j4ie0e"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed/x64-windows/share/drogon;C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed/x64-windows/share/trantor"
+      VCPKG_INSTALLED_DIR: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "_CXX_FILESYSTEM_HAVE_HEADER"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-j4ie0e'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7f464.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Wersja programu MSBuild 17.14.14+a129329f1 dla .NET Framework
+        Kompilacja rozpocz─Ö┼éa si─Ö 01.05.2026 13:50:15.
+        
+        Projekt ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j4ie0e\\cmTC_7f464.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        PrepareForBuild:
+          Tworzenie katalogu ÔÇ×cmTC_7f464.dir\\Debug\\ÔÇŁ.
+          Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
+          Tworzenie katalogu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j4ie0e\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_7f464.dir\\Debug\\cmTC_7f464.tlog\\ÔÇŁ.
+        InitializeBuildStatus:
+          Trwa tworzenie ÔÇ×cmTC_7f464.dir\\Debug\\cmTC_7f464.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_7f464.dir\\Debug\\cmTC_7f464.tlog\\unsuccessfulbuildÔÇŁ.
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"cmTC_7f464.dir\\Debug\\\\" /Fd"cmTC_7f464.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j4ie0e\\CheckIncludeFile.cxx"
+          Microsoft (R) C/C++ wersja kompilatora optymalizuj─ůcego 19.38.33145 dla x64
+          Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"cmTC_7f464.dir\\Debug\\\\" /Fd"cmTC_7f464.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j4ie0e\\CheckIncludeFile.cxx"
+          CheckIncludeFile.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j4ie0e\\Debug\\cmTC_7f464.exe" /INCREMENTAL /ILK:"cmTC_7f464.dir\\Debug\\cmTC_7f464.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-j4ie0e/Debug/cmTC_7f464.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-j4ie0e/Debug/cmTC_7f464.lib" /MACHINE:X64  /machine:x64 cmTC_7f464.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_7f464.vcxproj -> C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j4ie0e\\Debug\\cmTC_7f464.exe
+        FinalizeBuildStatus:
+          Usuwanie pliku ÔÇ×cmTC_7f464.dir\\Debug\\cmTC_7f464.tlog\\unsuccessfulbuildÔÇŁ.
+          Modyfikowanie ÔÇ×cmTC_7f464.dir\\Debug\\cmTC_7f464.tlog\\cmTC_7f464.lastbuildstateÔÇŁ.
+        Kompilowanie projektu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-j4ie0e\\cmTC_7f464.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
+        
+        Kompilacja powiod┼éa si─Ö.
+            Ostrze┼╝enia: 0
+            Liczba b┼é─Öd├│w: 0
+        
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:01.22
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CheckCXXSourceRuns.cmake:52 (cmake_check_source_runs)"
+      - "build/vcpkg_installed/x64-windows/share/drogon/FindFilesystem.cmake:126 (check_cxx_source_runs)"
+      - "build/vcpkg_installed/x64-windows/share/drogon/FindFilesystem.cmake:220 (_cmcm_check_cxx_source)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "C:/Strawberry/c/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "build/vcpkg_installed/x64-windows/share/drogon/DrogonConfig.cmake:70 (find_dependency)"
+      - "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake:908 (_find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Performing Test CXX_FILESYSTEM_NO_LINK_NEEDED"
+    directories:
+      source: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-04e3u3"
+      binary: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-04e3u3"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed/x64-windows/share/drogon;C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed/x64-windows/share/trantor"
+      VCPKG_INSTALLED_DIR: "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/vcpkg_installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/dev/vcpkg"
+    buildResult:
+      variable: "CXX_FILESYSTEM_NO_LINK_NEEDED_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-04e3u3'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_346d6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Wersja programu MSBuild 17.14.14+a129329f1 dla .NET Framework
+        Kompilacja rozpocz─Ö┼éa si─Ö 01.05.2026 13:50:17.
+        
+        Projekt ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-04e3u3\\cmTC_346d6.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        PrepareForBuild:
+          Tworzenie katalogu ÔÇ×cmTC_346d6.dir\\Debug\\ÔÇŁ.
+          Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
+          Tworzenie katalogu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-04e3u3\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_346d6.dir\\Debug\\cmTC_346d6.tlog\\ÔÇŁ.
+        InitializeBuildStatus:
+          Trwa tworzenie ÔÇ×cmTC_346d6.dir\\Debug\\cmTC_346d6.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_346d6.dir\\Debug\\cmTC_346d6.tlog\\unsuccessfulbuildÔÇŁ.
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CXX_FILESYSTEM_NO_LINK_NEEDED /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"cmTC_346d6.dir\\Debug\\\\" /Fd"cmTC_346d6.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-04e3u3\\src.cxx"
+          Microsoft (R) C/C++ wersja kompilatora optymalizuj─ůcego 19.38.33145 dla x64
+          Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CXX_FILESYSTEM_NO_LINK_NEEDED /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"cmTC_346d6.dir\\Debug\\\\" /Fd"cmTC_346d6.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-04e3u3\\src.cxx"
+          src.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-04e3u3\\Debug\\cmTC_346d6.exe" /INCREMENTAL /ILK:"cmTC_346d6.dir\\Debug\\cmTC_346d6.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-04e3u3/Debug/cmTC_346d6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/CMakeFiles/CMakeScratch/TryCompile-04e3u3/Debug/cmTC_346d6.lib" /MACHINE:X64  /machine:x64 cmTC_346d6.dir\\Debug\\src.obj
+          cmTC_346d6.vcxproj -> C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-04e3u3\\Debug\\cmTC_346d6.exe
+        FinalizeBuildStatus:
+          Usuwanie pliku ÔÇ×cmTC_346d6.dir\\Debug\\cmTC_346d6.tlog\\unsuccessfulbuildÔÇŁ.
+          Modyfikowanie ÔÇ×cmTC_346d6.dir\\Debug\\cmTC_346d6.tlog\\cmTC_346d6.lastbuildstateÔÇŁ.
+        Kompilowanie projektu ÔÇ×C:\\Users\\Samsung Smart Fridge\\Documents\\repos\\fast-smoke-finder\\build\\CMakeFiles\\CMakeScratch\\TryCompile-04e3u3\\cmTC_346d6.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
+        
+        Kompilacja powiod┼éa si─Ö.
+            Ostrze┼╝enia: 0
+            Liczba b┼é─Öd├│w: 0
+        
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:01.20
+        
+      exitCode: 0
+    runResult:
+      variable: "CXX_FILESYSTEM_NO_LINK_NEEDED_EXITCODE"
+      cached: true
+      stdout: |
+        C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder
+      stderr: |
+      exitCode: 0
+...

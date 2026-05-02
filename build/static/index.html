@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS2 QuickLineups</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+
+  <!-- Screen 1: Map selection -->
+  <div id="screen-map" class="screen active">
+    <div class="header-brand">
+      <span class="brand-cs">CS2</span>
+      <span class="brand-name">QuickLineups</span>
+    </div>
+    <p class="subtitle">Select a map to start searching</p>
+    <div id="map-grid"></div>
+  </div>
+
+  <!-- Screen 2: Search + results -->
+  <div id="screen-search" class="screen">
+    <div id="search-header">
+      <button id="btn-back" title="Back to maps (Escape)">&#8592; Maps</button>
+      <span id="map-label"></span>
+      <div id="type-filter">
+        <button class="filter active" data-type="">All</button>
+        <button class="filter" data-type="smoke">Smoke</button>
+        <button class="filter" data-type="molotov">Molotov</button>
+        <button class="filter" data-type="flash">Flash</button>
+      </div>
+      <button id="btn-add" title="Add a new lineup">&#43; Add</button>
+    </div>
+    <div id="search-wrap">
+      <input id="search-input" type="text"
+             placeholder="e.g.  ct a doors  ·  b ramp post-plant  ·  mid window smoke"
+             autocomplete="off" autocorrect="off" spellcheck="false">
+      <span id="result-count"></span>
+    </div>
+    <div id="results-container"></div>
+  </div>
+
+  <!-- Lineup detail modal -->
+  <div id="modal" class="hidden" role="dialog" aria-modal="true">
+    <div id="modal-backdrop"></div>
+    <div id="modal-content">
+      <button id="modal-close" title="Close (Escape)">&#x2715;</button>
+      <h2 id="modal-title"></h2>
+      <div id="modal-images">
+        <figure>
+          <img id="modal-pos" alt="Position">
+          <figcaption>Where to stand</figcaption>
+        </figure>
+        <figure>
+          <img id="modal-cross" alt="Crosshair placement">
+          <figcaption>Crosshair placement</figcaption>
+        </figure>
+      </div>
+      <div id="modal-meta"></div>
+      <a id="modal-video" href="#" target="_blank" rel="noopener noreferrer" class="hidden">
+        &#9654; Watch video guide
+      </a>
+    </div>
+  </div>
+
+  <!-- Add Lineup modal -->
+  <div id="modal-admin" class="hidden" role="dialog" aria-modal="true">
+    <div id="modal-admin-backdrop"></div>
+    <div id="modal-admin-content">
+      <div class="admin-header">
+        <h2>Add Lineup</h2>
+        <button id="admin-close" title="Close">&#x2715;</button>
+      </div>
+      <form id="admin-form" novalidate>
+
+        <div class="form-row">
+          <div class="form-field">
+            <span class="field-label">Map</span>
+            <select id="admin-map" required></select>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Type</span>
+            <select id="admin-type" required>
+              <option value="smoke">Smoke</option>
+              <option value="molotov">Molotov</option>
+              <option value="flash">Flash</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <span class="field-label">Title</span>
+          <input id="admin-title" type="text" required
+                 placeholder="e.g. A Short to CT Smoke">
+        </div>
+
+        <div class="form-field">
+          <span class="field-label">Tags
+            <span class="optional">— press Enter or comma to add</span>
+          </span>
+          <div id="admin-tags-wrap">
+            <div id="admin-tags-pills"></div>
+            <input id="admin-tag-input" type="text"
+                   placeholder="ct, a, short, doors, entry…" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <span class="field-label">Position Photo</span>
+            <label class="upload-zone">
+              <input type="file" id="upload-pos" accept="image/*">
+              <div id="preview-pos" class="upload-preview">
+                <span class="upload-hint">Click to choose file</span>
+              </div>
+            </label>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Crosshair Photo</span>
+            <label class="upload-zone">
+              <input type="file" id="upload-cross" accept="image/*">
+              <div id="preview-cross" class="upload-preview">
+                <span class="upload-hint">Click to choose file</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <span class="field-label">Stance</span>
+            <select id="admin-stance">
+              <option value="standing">Standing</option>
+              <option value="crouching">Crouching</option>
+              <option value="jumping">Jumping</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Throw Type</span>
+            <select id="admin-throw">
+              <option value="left-click">Left Click</option>
+              <option value="right-click">Right Click</option>
+              <option value="jump-throw">Jump Throw</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <span class="field-label">Description
+            <span class="optional">(optional)</span>
+          </span>
+          <textarea id="admin-desc" rows="2"
+                    placeholder="Where to stand, what to aim at…"></textarea>
+        </div>
+
+        <div class="form-field">
+          <span class="field-label">Video URL
+            <span class="optional">(optional)</span>
+          </span>
+          <input id="admin-video" type="url"
+                 placeholder="https://youtube.com/…">
+        </div>
+
+        <div id="admin-status"></div>
+
+        <div class="form-actions">
+          <button type="button" id="admin-cancel">Cancel</button>
+          <button type="submit" id="admin-submit">Save Lineup</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

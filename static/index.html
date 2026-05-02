@@ -29,6 +29,7 @@
         <button class="filter" data-type="molotov">Molotov</button>
         <button class="filter" data-type="flash">Flash</button>
       </div>
+      <button id="btn-add" title="Add a new lineup">&#43; Add</button>
     </div>
     <div id="search-wrap">
       <input id="search-input" type="text"
@@ -56,9 +57,132 @@
         </figure>
       </div>
       <div id="modal-meta"></div>
-      <a id="modal-video" href="#" target="_blank" rel="noopener noreferrer" class="hidden">
-        &#9654; Watch video guide
-      </a>
+      <div id="modal-footer">
+        <a id="modal-video" href="#" target="_blank" rel="noopener noreferrer" class="hidden">
+          &#9654; Watch video guide
+        </a>
+        <div id="modal-actions">
+          <button id="modal-edit">&#9998; Edit</button>
+          <button id="modal-delete">&#128465; Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Lineup modal -->
+  <div id="modal-admin" class="hidden" role="dialog" aria-modal="true">
+    <div id="modal-admin-backdrop"></div>
+    <div id="modal-admin-content">
+      <div class="admin-header">
+        <h2>Add Lineup</h2>
+        <button id="admin-close" title="Close">&#x2715;</button>
+      </div>
+      <form id="admin-form" novalidate>
+
+        <div class="form-row">
+          <div class="form-field">
+            <span class="field-label">Map</span>
+            <select id="admin-map" required></select>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Type</span>
+            <select id="admin-type" required>
+              <option value="smoke">Smoke</option>
+              <option value="molotov">Molotov</option>
+              <option value="flash">Flash</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <span class="field-label">Title</span>
+          <input id="admin-title" type="text" required
+                 placeholder="e.g. A Short to CT Smoke">
+        </div>
+
+        <div class="form-field">
+          <span class="field-label">Tags
+            <span class="optional">— press Enter or comma to add</span>
+          </span>
+          <div id="admin-tags-wrap">
+            <div id="admin-tags-pills"></div>
+            <input id="admin-tag-input" type="text"
+                   placeholder="ct, a, short, doors, entry…" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <span class="field-label">Position Photo</span>
+            <label class="upload-zone">
+              <input type="file" id="upload-pos" accept="image/*">
+              <div id="preview-pos" class="upload-preview">
+                <span class="upload-hint">Click to choose file</span>
+              </div>
+            </label>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Crosshair Photo</span>
+            <label class="upload-zone">
+              <input type="file" id="upload-cross" accept="image/*">
+              <div id="preview-cross" class="upload-preview">
+                <span class="upload-hint">Click to choose file</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <span class="field-label">Stance</span>
+            <select id="admin-stance">
+              <option value="standing">Standing</option>
+              <option value="crouching">Crouching</option>
+              <option value="jumping">Jumping (in place)</option>
+              <option value="forward">Forward (walking)</option>
+              <option value="forward-crouch">Forward + Crouch</option>
+              <option value="forward-jump">Forward + Jump</option>
+              <option value="forward-crouch-jump">Forward + Crouch + Jump</option>
+              <option value="forward-standing-jump">Forward + Standing Jump</option>
+              <option value="running">Running</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Throw Type</span>
+            <select id="admin-throw">
+              <option value="left-click">Left Click</option>
+              <option value="right-click">Right Click</option>
+              <option value="left-right-click">Left + Right Click</option>
+              <option value="jump-throw">Jump Throw (left click)</option>
+              <option value="jump-throw-right">Jump Throw (right click)</option>
+              <option value="jump-throw-both">Jump Throw (both)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <span class="field-label">Description
+            <span class="optional">(optional)</span>
+          </span>
+          <textarea id="admin-desc" rows="2"
+                    placeholder="Where to stand, what to aim at…"></textarea>
+        </div>
+
+        <div class="form-field">
+          <span class="field-label">Video URL
+            <span class="optional">(optional)</span>
+          </span>
+          <input id="admin-video" type="url"
+                 placeholder="https://youtube.com/…">
+        </div>
+
+        <div id="admin-status"></div>
+
+        <div class="form-actions">
+          <button type="button" id="admin-cancel">Cancel</button>
+          <button type="submit" id="admin-submit">Save Lineup</button>
+        </div>
+      </form>
     </div>
   </div>
 

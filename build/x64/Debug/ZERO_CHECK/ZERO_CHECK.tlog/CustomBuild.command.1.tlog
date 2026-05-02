@@ -1,0 +1,10 @@
+^C:\USERS\SAMSUNG SMART FRIDGE\DOCUMENTS\REPOS\FAST-SMOKE-FINDER\BUILD\CMAKEFILES\1F38EDB9730B927ED732AFFFB79ADE7F\GENERATE.STAMP.RULE
+setlocal
+C:\Strawberry\c\bin\cmake.exe "-SC:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder" "-BC:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Samsung Smart Fridge/Documents/repos/fast-smoke-finder/build/QuickLineups.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

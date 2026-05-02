@@ -1,0 +1,119 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 6cb75bd184a2ea5c3b65cf2a93af55c7a9964c4c7577a3f9df3b586425e81090
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8e659cc528378e548d4b2194b89c78ff5611a7e63019a42c893a20165b6f1a6d
+Status: install ok installed
+
+Package: sqlite3
+Version: 3.53.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 7e8ce42e85194eaa808d1b776144a78ba36a33b13ece7118c05d40b00b7c9532
+Description: SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
+Default-Features: json1
+Status: install ok installed
+
+Package: sqlite3
+Feature: json1
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enable JSON functionality for sqlite3
+Status: install ok installed
+
+Package: zlib
+Version: 1.3.2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 1bc2c3a23419f58c9cbfba3178d5c3457b392be08d83647473f227a43e9b72a2
+Description: A compression library
+Status: install ok installed
+
+Package: vcpkg-cmake-get-vars
+Version: 2025-05-29
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 36b159954e89e5bfbb2ca5652658e55f3692c38a51dcb9a87d43151e0e15c6d7
+Status: install ok installed
+
+Package: openssl
+Version: 3.6.2
+Depends: vcpkg-cmake, vcpkg-cmake-config, vcpkg-cmake-get-vars
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 7bdc57320221c770ea5125866246a222061e361ec52493d363808b09ec10b7a0
+Description: OpenSSL is an open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.
+Status: install ok installed
+
+Package: c-ares
+Version: 1.34.6
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 72987b4de8c742f1881eb44084cfc5d1315d35187396626b25cb2bf4dadaa97b
+Description: A C library for asynchronous DNS requests
+Status: install ok installed
+
+Package: trantor
+Version: 1.5.26
+Port-Version: 1
+Depends: c-ares, openssl, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: bc0e7c339ac21182336dbc6d3ad773ca047f3f65ffa81e5525391b09535f728b
+Description: A non-blocking I/O cross-platform TCP network library, using C++14
+Status: install ok installed
+
+Package: jsoncpp
+Version: 1.9.6
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2447195bc6b2fd77102d05e2fdd6254ecd7c082f3eba21455cf9160a872b8b43
+Description: JsonCpp is a C++ library that allows manipulating JSON values, including serialization and deserialization to and from strings. It can also preserve existing comment in unserialization/serialization steps, making it a convenient format to store user input files.
+Status: install ok installed
+
+Package: brotli
+Version: 1.2.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: ed2dfa9f5287c771ce5ee1680c788d456a8bfd80e3399e589069244a096e3206
+Description: a generic-purpose lossless compression algorithm that compresses data using a combination of a modern variant of the LZ77 algorithm, Huffman coding and 2nd order context modeling.
+Status: install ok installed
+
+Package: drogon
+Version: 1.9.12
+Depends: brotli, jsoncpp, trantor, vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 778937135f878dee664dea6fd9d2083dbe92961e24925d115f166977969e5ec0
+Description: A C++14/17 based HTTP web application framework running on Linux/macOS/Unix/Windows
+Status: install ok installed
+
+Package: drogon
+Feature: orm
+Architecture: x64-windows
+Multi-Arch: same
+Description: Build with object-relational mapping support.
+Status: install ok installed
+
+Package: drogon
+Feature: sqlite3
+Depends: sqlite3
+Architecture: x64-windows
+Multi-Arch: same
+Description: Support reading and writing from/to SQLite databases.
+Status: install ok installed
+

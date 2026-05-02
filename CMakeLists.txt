@@ -9,6 +9,7 @@ find_package(Drogon CONFIG REQUIRED)
 add_executable(quicklineups
     src/main.cc
     src/controllers/LineupController.cc
+    src/controllers/AdminController.cc
     src/services/LineupStore.cc
 )
 

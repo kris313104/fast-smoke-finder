@@ -1,0 +1,67 @@
+[
+  {
+    "id": "inferno_banana_molotov_001",
+    "map": "inferno",
+    "type": "molotov",
+    "title": "Banana Molotov (top of banana)",
+    "description": "Stand in CT. Aim above the banana wall and throw right-click.",
+    "tags": ["banana", "b", "ct-side", "default", "anti-rush"],
+    "stance": "standing",
+    "throw_type": "right-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "inferno_a_pit_smoke_001",
+    "map": "inferno",
+    "type": "smoke",
+    "title": "A Pit Smoke",
+    "description": "From T spawn, aim at the right edge of the arches.",
+    "tags": ["a", "pit", "entry", "t-side", "default"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "inferno_a_ct_smoke_001",
+    "map": "inferno",
+    "type": "smoke",
+    "title": "A CT Smoke",
+    "description": "Stand at apartments exit, aim at the third window on the right.",
+    "tags": ["a", "ct", "entry", "t-side", "apartments"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "inferno_banana_smoke_001",
+    "map": "inferno",
+    "type": "smoke",
+    "title": "Banana Smoke (car)",
+    "description": "From T-side banana, stand behind the car and throw.",
+    "tags": ["banana", "b", "car", "entry", "t-side"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "inferno_b_site_retake_flash_001",
+    "map": "inferno",
+    "type": "flash",
+    "title": "B Site Retake Flash",
+    "description": "From CT, throw a curved flash over the B site wall.",
+    "tags": ["b", "ct-side", "retake", "flash"],
+    "stance": "standing",
+    "throw_type": "jump-throw",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  }
+]

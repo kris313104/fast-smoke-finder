@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Samsung Smart Fridge\Documents\repos\fast-smoke-finder\src\main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Samsung Smart Fridge\Documents\repos\fast-smoke-finder\src\controllers\LineupController.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Samsung Smart Fridge\Documents\repos\fast-smoke-finder\src\controllers\AdminController.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Samsung Smart Fridge\Documents\repos\fast-smoke-finder\src\services\LineupStore.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Samsung Smart Fridge\Documents\repos\fast-smoke-finder\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6BB6E965-8141-3F84-95CC-2380839B9BBE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

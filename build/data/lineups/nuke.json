@@ -1,0 +1,67 @@
+[
+  {
+    "id": "nuke_outside_smoke_001",
+    "map": "nuke",
+    "type": "smoke",
+    "title": "Outside Ramp Smoke",
+    "description": "Stand behind the T-side wall. Aim at the top corner of ramp entrance.",
+    "tags": ["outside", "ramp", "entry", "t-side"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "nuke_a_upper_lobby_smoke_001",
+    "map": "nuke",
+    "type": "smoke",
+    "title": "Upper Lobby Smoke",
+    "description": "From the ramp, aim at the second ventilation shaft.",
+    "tags": ["a", "upper", "lobby", "entry", "t-side"],
+    "stance": "crouching",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "nuke_hut_molotov_001",
+    "map": "nuke",
+    "type": "molotov",
+    "title": "Hut Molotov",
+    "description": "Flush out players hiding in hut during CT retake.",
+    "tags": ["hut", "outside", "ct-side", "retake"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "nuke_b_lower_smoke_001",
+    "map": "nuke",
+    "type": "smoke",
+    "title": "B Lower Site Smoke",
+    "description": "Stand at lower tunnels. Aim at the yellow pipe on the ceiling.",
+    "tags": ["b", "lower", "tunnels", "entry", "t-side"],
+    "stance": "standing",
+    "throw_type": "left-click",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  },
+  {
+    "id": "nuke_silo_flash_001",
+    "map": "nuke",
+    "type": "flash",
+    "title": "Silo Pop Flash",
+    "description": "From outside, jump-throw to flash defenders inside silo.",
+    "tags": ["outside", "silo", "t-side", "entry", "pop-flash"],
+    "stance": "standing",
+    "throw_type": "jump-throw",
+    "position_img": "/img/lineups/placeholder_pos.jpg",
+    "crosshair_img": "/img/lineups/placeholder_cross.jpg",
+    "video_url": ""
+  }
+]

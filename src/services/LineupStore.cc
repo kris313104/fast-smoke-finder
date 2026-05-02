@@ -4,6 +4,7 @@
 #include <fstream>
 #include <algorithm>
 #include <cctype>
+#include <chrono>
 #include <sstream>
 
 namespace fs = std::filesystem;
@@ -41,6 +42,7 @@ static std::vector<std::string> splitOn(const std::string& s, const std::string&
 // ---- load ------------------------------------------------------------
 
 void LineupStore::loadFromDirectory(const std::string& dataDir) {
+    dataDir_ = dataDir;
     fs::path dir(dataDir);
     if (!fs::exists(dir) || !fs::is_directory(dir)) {
         LOG_WARN << "LineupStore: data directory not found: " << dataDir;
@@ -69,7 +71,7 @@ void LineupStore::loadFromDirectory(const std::string& dataDir) {
             continue;
         }
 
-        std::string mapId = entry.path().stem().string(); // filename without extension
+        std::string mapId = entry.path().stem().string();
         auto& vec = data_[mapId];
         vec.reserve(root.size());
         for (const auto& jl : root)
@@ -84,19 +86,116 @@ void LineupStore::loadFromDirectory(const std::string& dataDir) {
 
 // ---- index -----------------------------------------------------------
 
+void LineupStore::indexLineup(const std::string& mapId, size_t idx) {
+    auto& idxMap = tagIndex_[mapId];
+    for (const auto& tag : data_[mapId][idx].tags) {
+        std::string norm = normalise(tag);
+        idxMap[norm].push_back(idx);
+        for (const auto& part : splitOn(norm, "-"))
+            if (part != norm) idxMap[part].push_back(idx);
+    }
+}
+
 void LineupStore::buildIndex() {
-    for (auto& [mapId, lineups] : data_) {
-        auto& idx = tagIndex_[mapId];
-        for (size_t i = 0; i < lineups.size(); ++i) {
-            for (const auto& tag : lineups[i].tags) {
-                std::string norm = normalise(tag);
-                idx[norm].push_back(i);
-                // Also index each hyphen-separated part individually.
-                for (const auto& part : splitOn(norm, "-"))
-                    if (part != norm) idx[part].push_back(i);
+    for (auto& [mapId, lineups] : data_)
+        for (size_t i = 0; i < lineups.size(); ++i)
+            indexLineup(mapId, i);
+}
+
+void LineupStore::rebuildMapIndex(const std::string& mapId) {
+    tagIndex_[mapId].clear();
+    auto it = data_.find(mapId);
+    if (it == data_.end()) return;
+    for (size_t i = 0; i < it->second.size(); ++i)
+        indexLineup(mapId, i);
+}
+
+// ---- addLineup + persist ---------------------------------------------
+
+std::string LineupStore::generateId(const std::string& map, const std::string& type) {
+    auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(
+        std::chrono::system_clock::now().time_since_epoch()).count();
+    return map + "_" + type + "_" + std::to_string(ms);
+}
+
+void LineupStore::addLineup(Lineup& l) {
+    if (l.id.empty())
+        l.id = generateId(l.map, l.type);
+
+    std::lock_guard<std::mutex> lock(mutex_);
+    auto& vec = data_[l.map];
+    size_t newIdx = vec.size();
+    vec.push_back(l);
+    indexLineup(l.map, newIdx);
+    saveMap(l.map);
+}
+
+bool LineupStore::updateLineup(const Lineup& updated) {
+    std::lock_guard<std::mutex> lock(mutex_);
+
+    // Search all maps for the matching id.
+    for (auto& [mapId, vec] : data_) {
+        for (size_t i = 0; i < vec.size(); ++i) {
+            if (vec[i].id != updated.id) continue;
+
+            if (mapId == updated.map) {
+                vec[i] = updated;
+                rebuildMapIndex(mapId);
+                saveMap(mapId);
+            } else {
+                // Move to a different map.
+                vec.erase(vec.begin() + static_cast<std::ptrdiff_t>(i));
+                rebuildMapIndex(mapId);
+                saveMap(mapId);
+
+                auto& newVec = data_[updated.map];
+                size_t newIdx = newVec.size();
+                newVec.push_back(updated);
+                indexLineup(updated.map, newIdx);
+                saveMap(updated.map);
             }
+            return true;
         }
     }
+    return false;
+}
+
+bool LineupStore::deleteLineup(const std::string& id) {
+    std::lock_guard<std::mutex> lock(mutex_);
+    for (auto& [mapId, vec] : data_) {
+        for (size_t i = 0; i < vec.size(); ++i) {
+            if (vec[i].id != id) continue;
+            vec.erase(vec.begin() + static_cast<std::ptrdiff_t>(i));
+            rebuildMapIndex(mapId);
+            saveMap(mapId);
+            return true;
+        }
+    }
+    return false;
+}
+
+void LineupStore::saveMap(const std::string& mapId) {
+    if (dataDir_.empty()) return;
+    auto it = data_.find(mapId);
+    if (it == data_.end()) return;
+
+    fs::path filePath = fs::path(dataDir_) / (mapId + ".json");
+    Json::Value arr(Json::arrayValue);
+    for (const auto& l : it->second)
+        arr.append(lineupToJson(l));
+
+    Json::StreamWriterBuilder wb;
+    wb["indentCharacters"] = "  ";
+    wb["commentStyle"]     = "None";
+
+    std::ofstream f(filePath);
+    if (!f.is_open()) {
+        LOG_WARN << "LineupStore: cannot write " << filePath;
+        return;
+    }
+    f << Json::writeString(wb, arr);
+    LOG_INFO << "LineupStore: saved " << it->second.size()
+             << " lineups for map '" << mapId << "' to " << filePath;
 }
 
 // ---- search ----------------------------------------------------------
@@ -136,7 +235,7 @@ std::vector<const Lineup*> LineupStore::search(
 
     constexpr size_t kMaxResults = 50;
     std::vector<const Lineup*> results;
-    results.reserve(std::min(ranked.size(), kMaxResults));
+    results.reserve((std::min)(ranked.size(), kMaxResults));
     for (size_t k = 0; k < ranked.size() && k < kMaxResults; ++k)
         results.push_back(&lineups[ranked[k].second]);
     return results;
